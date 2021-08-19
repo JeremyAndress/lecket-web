@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  next:
+    # env_file: .env
+    build: .
+    restart: always
+    ports:
+      - "3000:3000"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5m"
+        max-file: "10"
