@@ -3,7 +3,9 @@ version: '3.7'
 services:
   next:
     # env_file: .env
-    build: .
+    build: 
+      context: .
+      dockerfile: ./compose/stage.Dockerfile
     restart: always
     ports:
       - "3000:3000"
