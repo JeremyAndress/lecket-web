@@ -1,36 +1,15 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
+import Header from "../components/header";
+import Sidenav from "../components/sidenav";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <header className="header-content">
-        <div className="header-row">
-          <div className="header-title">
-            <h1 className="primary-color">Lecket</h1>
-          </div>
-          <div className="header-input">
-            <input
-              className="secondary-color header-search"
-              type="text"
-              name=""
-              id=""
-              placeholder="Search"
-            />
-          </div>
-          <div className="header-auth">
-            <button type="button" className="button primary-color background-card-color">
-              Login <i className="arrow down primary-color"/>
-            </button>
-          </div>
-        </div>
-      </header>
+      <Header />
       <main className="main-content">
-        <section className="sidenav">
-          <p className="secondary-color">MENU</p>
-          <p className="secondary-color">Discover</p>
-        </section>
+        <Sidenav />
         <section className="main-section">
           <Component {...pageProps} />
         </section>
@@ -38,4 +17,5 @@ function MyApp({ Component, pageProps }: AppProps) {
     </>
   );
 }
+
 export default MyApp;
