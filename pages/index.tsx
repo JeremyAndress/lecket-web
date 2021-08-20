@@ -1,6 +1,9 @@
+import CustomHead from "../components/customHead";
+
 export default function Home() {
   return (
     <>
+      <CustomHead />
       <h2 className="primary-color">Discover</h2>
       <div className="discover-gallery">
         <div className="discover-item">
