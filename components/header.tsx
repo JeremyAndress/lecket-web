@@ -1,9 +1,13 @@
+import Image from "next/image";
+import lemon from "../public/lemon.svg";
+
 const Header = () => {
   return (
     <header className="header-content">
       <div className="header-row">
         <div className="header-title">
-          <h1 className="primary-color">Lecket</h1>
+          <h1 className="primary-color k">Lecket</h1>
+          <Image src={lemon} width="30" height="30" alt="Lecket Icon" />
         </div>
         <div className="header-input">
           <input
