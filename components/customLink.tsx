@@ -9,10 +9,11 @@ type Props = {
 
 const CustomLink = ({ href, text, className = "secondary-color" }: Props) => {
   const router = useRouter();
-  if (router.pathname == href) className = `${className} active`;
+  const definitiveClassName =
+    router.pathname === href ? `${className} active` : className;
   return (
     <Link href={href}>
-      <a className={className}>{text}</a>
+      <a className={definitiveClassName}>{text}</a>
     </Link>
   );
 };
