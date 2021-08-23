@@ -1,5 +1,5 @@
-import Image from "next/image";
-import lemon from "../public/lemon.svg";
+import Image from 'next/image';
+import lemon from '../public/lemon.svg';
 
 const Header = () => (
   <header className="header-content">
@@ -22,7 +22,21 @@ const Header = () => (
           type="button"
           className="button primary-color background-card-color"
         >
-          Login <i className="arrow down primary-color" />
+          Menu
+          <ul>
+            <a className="secondary-color" href="#">
+              Login
+            </a>
+            <a className="secondary-color" href="#">
+              Register
+            </a>
+            <a className="secondary-color" href="#">
+              Community
+            </a>
+            <a className="secondary-color" href="#">
+              Help
+            </a>
+          </ul>
         </button>
       </div>
     </div>
