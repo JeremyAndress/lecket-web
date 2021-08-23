@@ -1,18 +1,17 @@
-import Link from "next/link";
 import CustomLink from "./customLink";
-const Sidenav = () => {
-  return (
-    <section className="sidenav">
-      <div className="side-wrapper">
-        <p className="side-title secondary-color">MENU</p>
-        <div className="side-menu">
-          <CustomLink text="Discover" href="/" />
-          <CustomLink text="Latest Movies" href="/movies" />
-          <CustomLink text="Categories" href="/" />
-        </div>
+
+const Sidenav = () => (
+  <section className="sidenav">
+    <div className="side-wrapper">
+      <p className="side-title secondary-color">MENU</p>
+      <div className="side-menu">
+        <CustomLink text="Discover" href="/" />
+        <CustomLink text="Most Popular" href="/" />
+        <CustomLink text="Recently Added" href="/recently-added" />
+        <CustomLink text="All Genres" href="/" />
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default Sidenav;
