@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   next:
-    # env_file: .env
+    env_file: .env
     build: 
       context: .
       dockerfile: ./compose/stage.Dockerfile
