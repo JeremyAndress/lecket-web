@@ -13,6 +13,8 @@ services:
       - ./pages:/app/pages/
       - ./public:/app/public/
       - ./styles:/app/styles/
+      - ./api/:/app/api/
+      - ./types:/app/types/
       - ./components:/app/components/
     logging:
       driver: "json-file"
