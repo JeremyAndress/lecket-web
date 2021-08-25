@@ -14,7 +14,8 @@ const Movies = ({ movies, error }: Props) => (
     <CustomHead title="Lecket - Recently Added" />
     <h2 className="primary-color">Recently Added</h2>
     <div className="most-watches-gallery">
-      {!error && movies?.map((movie) => <MovieItem movie={movie} />)}
+      {!error &&
+        movies?.map((movie) => <MovieItem movie={movie} key={movie.movieId} />)}
     </div>
   </>
 );
