@@ -1,8 +1,8 @@
+import Link from 'next/link';
 import CustomHead from '../components/customHead';
 import MovieItem from './recently-added/movie-item';
 import { getMovies } from '../api/movies/get';
 import { Movies as MovieType } from '../types/movies';
-import Link from 'next/link';
 
 type Props = {
   movies?: Array<MovieType>;
