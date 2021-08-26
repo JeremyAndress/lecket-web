@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import CustomHead from '../../components/customHead';
 import { getOneMovie } from '../../api/movies/get';
 import { Movies } from '../../types/movies';

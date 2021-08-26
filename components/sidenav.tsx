@@ -8,7 +8,7 @@ const Sidenav = () => (
         <CustomLink text="Discover" href="/" />
         <CustomLink text="Most Popular" href="/" />
         <CustomLink text="Recently Added" href="/recently-added" />
-        <CustomLink text="All Genres" href="/" />
+        <CustomLink text="All Genres" href="/all-genres" />
       </div>
     </div>
   </section>
