@@ -1,5 +1,5 @@
 import CustomHead from '../../components/customHead';
-import getMovies from '../../api/movies/get';
+import { getMovies } from '../../api/movies/get';
 import { Movies as MovieType } from '../../types/movies';
 import MovieItem from './movie-item';
 // import Link from "next/link";
