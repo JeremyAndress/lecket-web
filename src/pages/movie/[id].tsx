@@ -12,7 +12,7 @@ const Movie = ({ movie, error }: Props) => {
 
   return (
     <>
-      <CustomHead title={`${movie.name} Lecket`} />
+      <CustomHead title={`${movie.name}`} />
       <iframe
         height="500px"
         width="80%"

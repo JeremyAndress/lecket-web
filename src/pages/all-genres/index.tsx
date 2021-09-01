@@ -1,6 +1,7 @@
 import GenresImages from './genresImages';
 import { getCategories } from '../../api/categories/get';
 import { CategoryBase } from '../../types/movies';
+import CustomHead from '../../components/customHead';
 
 type Props = {
   categories?: Array<CategoryBase>;
@@ -9,11 +10,12 @@ type Props = {
 
 const AllGenres = ({ categories, error }: Props) => (
   <>
+    <CustomHead title="All Genres" />
     <h2 className="primary-color">All Genres</h2>
     <div className="genres-gallery">
       {!error &&
         categories?.map((category) => (
-          <div className="genres-item">
+          <div key={category.categoryId} className="genres-item">
             <div className="genre-container">
               <a className="card-click" href="#">
                 <h3 className="primary-color">{category.name}</h3>
