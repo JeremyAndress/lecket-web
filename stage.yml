@@ -10,12 +10,7 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./pages:/app/pages/
-      - ./public:/app/public/
-      - ./styles:/app/styles/
-      - ./api/:/app/api/
-      - ./types:/app/types/
-      - ./components:/app/components/
+      - ./src/:/app/src/
     logging:
       driver: "json-file"
       options:

@@ -1,6 +1,6 @@
 import { instance } from "../index";
 
-export default async function getMovies(
+export async function getMovies(
   page: number,
   quantity: number,
   order?: string
@@ -9,5 +9,12 @@ export default async function getMovies(
   const { data } = await instance.get("movies/pagination", {
     params: params,
   });
+  return data;
+}
+
+export async function getOneMovie(
+  id: string
+) {
+  const { data } = await instance.get(`movies/${id}`);
   return data;
 }
