@@ -1,6 +1,6 @@
 import GenresImages from './genresImages';
 import { getCategories } from '../../api/categories/get';
-import { CategoryBase } from '../../types/movies';
+import { CategoryBase } from '../../types/category';
 import CustomHead from '../../components/customHead';
 
 type Props = {
