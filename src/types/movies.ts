@@ -1,4 +1,4 @@
-import { Category } from "./category";
+import { Category } from './category';
 
 export type Link = {
   id: number;
@@ -14,7 +14,7 @@ export type Movies = {
   description: string;
   linkImage?: string;
   createAt: string;
-  user: any;
+  user?: any;
   links: Array<Link>;
   categories?: Array<Category>;
 };
