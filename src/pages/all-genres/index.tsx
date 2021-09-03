@@ -17,19 +17,19 @@ const AllGenres = ({ categories, error }: Props) => (
         categories?.map((category) => (
           <div key={category.categoryId} className="genres-item">
             <div className="genre-container">
-              <a className="card-click" href="#">
+              <a className="card-click">
                 <h3 className="primary-color">{category.name}</h3>
                 {GenresImages[category.name] ? (
                   <img
                     src={`${GenresImages[category.name]}`}
                     width="600"
                     height="300"
-                    alt={`genre-image${category.categoryId}`}
+                    alt={`genre-${category.categoryId}`}
                   />
                 ) : (
                   <img
                     src="https://picsum.photos/600/300"
-                    alt="Not found image"
+                    alt="Not found"
                   />
                 )}
               </a>
