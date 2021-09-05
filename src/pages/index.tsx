@@ -33,7 +33,10 @@ export default function Home({ movies, error }: Props) {
       <br />
       <h2 className="primary-color">Most Watches</h2>
       <div className="most-watches-gallery">
-        {!error && movies?.map((movie) => <MovieItem movie={movie} />)}
+        {!error &&
+          movies?.map((movie) => (
+            <MovieItem movie={movie} key={movie.movieId} />
+          ))}
         <div className="most-watches-item">
           <Link href="/recently-added">
             <a className="card-click">
@@ -58,7 +61,7 @@ export const getServerSideProps = async () => {
     const data = await getMovies(0, 7);
     return {
       props: {
-        movies: data.content,
+        movies: data.data,
       },
     };
   } catch (error) {
