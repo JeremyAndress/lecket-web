@@ -3,6 +3,7 @@ import CustomHead from '../components/customHead';
 import MovieItem from './recently-added/movie-item';
 import { getMovies } from '../api/movies/get';
 import { Movies as MovieType } from '../types/movies';
+import EmblaCarousel from '../components/EmblaCarousel';
 
 type Props = {
   movies?: Array<MovieType>;
@@ -14,22 +15,14 @@ export default function Home({ movies, error }: Props) {
     <>
       <CustomHead />
       <h2 className="primary-color">Discover</h2>
-      <div className="discover-gallery">
-        <div className="discover-item">
-          <img
-            className="card-img"
-            src="https://picsum.photos/500/300"
-            alt=""
-          />
-        </div>
-        <div className="discover-item">
-          <img
-            className="card-img"
-            src="https://picsum.photos/500/300"
-            alt=""
-          />
-        </div>
-      </div>
+      <EmblaCarousel
+        slides={[
+          'https://picsum.photos/500/350',
+          'https://picsum.photos/500/300',
+          'https://picsum.photos/500/400',
+          'https://picsum.photos/500/500',
+        ]}
+      />
       <br />
       <h2 className="primary-color">Most Watches</h2>
       <div className="most-watches-gallery">

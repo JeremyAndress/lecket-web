@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import '../styles/globals.css';
+import '../styles/embla.css';
 import type { AppProps } from 'next/app';
 import Router from 'next/router';
 import Header from '../components/header';
