@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useEmblaCarousel } from 'embla-carousel/react';
 
 type SlideType = {

@@ -27,16 +27,22 @@ const Header = () => (
         >
           Menu
           <ul>
-            <a className="secondary-color" href="#">
-              Login
-            </a>
-            <a className="secondary-color" href="#">
-              Register
-            </a>
-            <a className="secondary-color" href="#">
+            <Link href="/login">
+              <a className="secondary-color">Login</a>
+            </Link>
+            <Link href="/login">
+              <a className="secondary-color">Register</a>
+            </Link>
+            <a
+              className="secondary-color"
+              href="https://github.com/Lemon-Rocket"
+            >
               Community
             </a>
-            <a className="secondary-color" href="#">
+            <a
+              className="secondary-color"
+              href="https://github.com/Lemon-Rocket"
+            >
               Help
             </a>
           </ul>
