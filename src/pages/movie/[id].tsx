@@ -12,8 +12,9 @@ const Movie = ({ movie, error }: Props) => {
 
   return (
     <>
-      <CustomHead title={`${movie.name} Lecket`} />
+      <CustomHead title={movie.name} />
       <iframe
+        title={movie.name}
         height="500px"
         width="80%"
         src="https://www.youtube.com/embed/LUk73pUe9i4?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com"

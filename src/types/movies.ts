@@ -1,12 +1,4 @@
-export type CategoryBase = {
-  categoryId: string;
-  description: string;
-  name: string;
-};
-
-export type Category = CategoryBase & {
-  id: number;
-}
+import { Category } from './category';
 
 export type Link = {
   id: number;
@@ -22,7 +14,7 @@ export type Movies = {
   description: string;
   linkImage?: string;
   createAt: string;
-  user: any;
+  user?: any;
   links: Array<Link>;
   categories?: Array<Category>;
 };

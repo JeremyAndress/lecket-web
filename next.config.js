@@ -1,6 +1,9 @@
 module.exports = {
   reactStrictMode: true,
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: true
   },
-}
+  publicRuntimeConfig: {
+    backendUrl: process.env.API_URL
+  }
+};

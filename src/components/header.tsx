@@ -1,11 +1,14 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import lemon from '../public/lemon.svg';
 
 const Header = () => (
   <header className="header-content">
     <div className="header-row">
       <div className="header-title">
-        <h1 className="primary-color k">Lecket</h1>
+        <Link href="/">
+          <h1 className="primary-color k">Lecket</h1>
+        </Link>
         <Image src={lemon} width="30" height="30" alt="Lecket Icon" />
       </div>
       <div className="header-input">
@@ -24,16 +27,22 @@ const Header = () => (
         >
           Menu
           <ul>
-            <a className="secondary-color" href="#">
-              Login
-            </a>
-            <a className="secondary-color" href="#">
-              Register
-            </a>
-            <a className="secondary-color" href="#">
+            <Link href="/login">
+              <a className="secondary-color">Login</a>
+            </Link>
+            <Link href="/login">
+              <a className="secondary-color">Register</a>
+            </Link>
+            <a
+              className="secondary-color"
+              href="https://github.com/Lemon-Rocket"
+            >
               Community
             </a>
-            <a className="secondary-color" href="#">
+            <a
+              className="secondary-color"
+              href="https://github.com/Lemon-Rocket"
+            >
               Help
             </a>
           </ul>
