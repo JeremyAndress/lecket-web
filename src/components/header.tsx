@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import lemon from '../public/lemon.svg';
+import UserButton from './userButton';
 
 const Header = () => (
   <header className="header-content">
@@ -21,32 +22,7 @@ const Header = () => (
         />
       </div>
       <div className="header-auth">
-        <button
-          type="button"
-          className="button primary-color background-card-color"
-        >
-          Menu
-          <ul>
-            <Link href="/login">
-              <a className="secondary-color">Login</a>
-            </Link>
-            <Link href="/login">
-              <a className="secondary-color">Register</a>
-            </Link>
-            <a
-              className="secondary-color"
-              href="https://github.com/Lemon-Rocket"
-            >
-              Community
-            </a>
-            <a
-              className="secondary-color"
-              href="https://github.com/Lemon-Rocket"
-            >
-              Help
-            </a>
-          </ul>
-        </button>
+        <UserButton />
       </div>
     </div>
   </header>

@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
-import Router from 'next/router';
 import CustomHead from '../../components/customHead';
 import { login } from '../../api/auth/login';
+import { User as UserType } from '../../types/user';
+import useAuth from '../../hooks/useAuth';
 
 const Index = () => {
+  const { login: loginCookie } = useAuth();
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -23,9 +25,8 @@ const Index = () => {
         email: formData.email,
         password: formData.password,
       };
-      const data = await login(authData);
-      console.log(data);
-      Router.push('/');
+      const data: UserType = await login(authData);
+      loginCookie(data.firstName, '/');
     } catch (error) {
       console.error(error);
     }
