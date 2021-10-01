@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, FormEvent } from 'react';
 import CustomHead from '../../components/customHead';
 import { login } from '../../api/auth/login';
 import { User as UserType } from '../../types/user';
@@ -18,7 +18,7 @@ const Index = () => {
       [event.target.name]: event.target.value,
     });
   };
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     try {
       const authData = {
