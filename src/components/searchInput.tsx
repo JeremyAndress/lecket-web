@@ -38,9 +38,9 @@ const SearchInput = () => {
       <input
         className="secondary-color header-search"
         type="text"
-        name=""
+        name="search"
         id=""
-        onBlur={() => setActiveSearch(false)}
+        onBlur={() => setTimeout(() => setActiveSearch(false), 0)}
         onChange={handleOnChange}
         value={name}
         placeholder="Search"
