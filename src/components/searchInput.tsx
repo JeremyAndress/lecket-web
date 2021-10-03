@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Router from 'next/router';
 import debounce from 'lodash/debounce';
 import { useEffect, useState, useCallback } from 'react';
 import { searchMovie } from '../api/movies/get';
@@ -40,7 +40,7 @@ const SearchInput = () => {
         type="text"
         name="search"
         id=""
-        onBlur={() => setTimeout(() => setActiveSearch(false), 0)}
+        onBlur={() => setActiveSearch(false)}
         onChange={handleOnChange}
         value={name}
         placeholder="Search"
@@ -49,11 +49,12 @@ const SearchInput = () => {
         <div className="search-result">
           <ul>
             {movies.map((movie: BasicMovie) => (
-              <Link href={`/movie/${movie.movieId}`} key={movie.id}>
-                <li>
-                  <b>{movie.name}</b>
-                </li>
-              </Link>
+              <li
+                onMouseDown={() => Router.push(`/movie/${movie.movieId}`)}
+                key={movie.id}
+              >
+                <b>{movie.name}</b>
+              </li>
             ))}
           </ul>
         </div>
