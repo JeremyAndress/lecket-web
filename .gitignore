@@ -29,3 +29,10 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# Files and directories created by pub
+.dart_tool/
+.packages
+build/
+# If you're building an application, you may want to check-in your pubspec.lock
+pubspec.lock
