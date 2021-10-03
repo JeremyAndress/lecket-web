@@ -1,0 +1,25 @@
+.center-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.spinner-loading {
+  margin-top: 20px;
+  --size: 120px;
+  --border: 8px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  position: relative;
+  border: var(--border) solid lighten(#202020, 5%);
+  border-right: var(--border) solid #fddc1e;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
