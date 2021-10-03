@@ -7,10 +7,13 @@ export type Link = {
   url: string;
 };
 
-export type Movies = {
+export type BasicMovie = {
   id: number;
   movieId: string;
   name: string;
+};
+
+export type Movies = BasicMovie & {
   description: string;
   linkImage?: string;
   createAt: string;
