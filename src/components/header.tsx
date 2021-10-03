@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import lemon from '../public/lemon.svg';
 import UserButton from './userButton';
+import SearchInput from './searchInput';
 
 const Header = () => (
   <header className="header-content">
@@ -12,15 +13,7 @@ const Header = () => (
         </Link>
         <Image src={lemon} width="30" height="30" alt="Lecket Icon" />
       </div>
-      <div className="header-input">
-        <input
-          className="secondary-color header-search"
-          type="text"
-          name=""
-          id=""
-          placeholder="Search"
-        />
-      </div>
+      <SearchInput />
       <div className="header-auth">
         <UserButton />
       </div>

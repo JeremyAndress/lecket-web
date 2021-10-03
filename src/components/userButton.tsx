@@ -8,7 +8,7 @@ const UserButton = () => {
       type="button"
       className="button primary-color background-card-color"
     >
-      {username ? username : 'Menu'}
+      {username || 'Menu'}
       <ul>
         {!username && (
           <>
